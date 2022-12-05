@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nikitakozlovjr/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/nikitakozlovjr/frontend-project-44#readme"
+  "homepage": "https://github.com/nikitakozlovjr/frontend-project-44#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }
