@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 //Импорты
 import readlineSync from 'readline-sync';
 //код
