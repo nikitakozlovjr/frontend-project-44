@@ -1,28 +1,28 @@
 #!/usr/bin/env node
 
-// Импорты 
+// Импорты
 import readlineSync from 'readline-sync';
 
 // Код
-//приветствие
+// приветствие
 
-console.log("Welcome to the Brain Games!");
+console.log('Welcome to the Brain Games!');
 const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 
-//выводим правила игры
+// выводим правила игры
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 let rightAnswers = 0;
 
-//игровой цикл
+// игровой цикл
 
 while (rightAnswers < 3) {
   const num = Math.floor(Math.random() * 100);
   console.log(`Question: ${num}`);
   const answer = readlineSync.question('Your answer: ');
-  //проверка ответа
+  // проверка ответа
   if (num % 2 === 0 && answer === 'yes') {
     console.log('Correct!');
     rightAnswers += 1;
@@ -41,5 +41,5 @@ while (rightAnswers < 3) {
 }
 
 if (rightAnswers === 3) {
-    console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 }

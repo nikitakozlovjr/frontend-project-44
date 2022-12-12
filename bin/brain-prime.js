@@ -1,47 +1,47 @@
 #!/usr/bin/env node
 
-// Импорты 
+// Импорты
 import readlineSync from 'readline-sync';
 
 // Код
-//приветствие
+// приветствие
 
-console.log("Welcome to the Brain Games!");
+console.log('Welcome to the Brain Games!');
 const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 
-//выводим правила игры
+// выводим правила игры
 
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-//игровой цикл
+// игровой цикл
 
-let rightAnswers = 0; 
+let rightAnswers = 0;
 
 while (rightAnswers < 3) {
-  const num = Math.floor(Math.random() * 1000);//генерируем число
-  let stack = [];//создаем массив, который будет являться стеком
-  //запускаем цикл, который будет проходить по всем возможным делителям    
+  const num = Math.floor(Math.random() * 1000);// генерируем число
+  const stack = [];// создаем массив, который будет являться стеком
+  // запускаем цикл, который будет проходить по всем возможным делителям
   for (let i = 1; i <= num; i += 1) {
     if (num % i === 0) {
       stack.push(i);
-    } 
-    if(stack.length > 2) {
+    }
+    if (stack.length > 2) {
       break;
     }
   }
-  //создаем переменную, в которую помещаем правильный ответ
+  // создаем переменную, в которую помещаем правильный ответ
   let trueAnswer = '';
   if (stack.length <= 2) {
     trueAnswer = 'yes';
   } else {
     trueAnswer = 'no';
   }
-  //выводим вопрос пользователю
+  // выводим вопрос пользователю
   console.log(`Question: ${num}`);
-  //предоставляем поле для ввода ответа пользователю и тут же сохраняем ее в переменную
+  // предоставляем поле для ввода ответа пользователю и тут же сохраняем ее в переменную
   const playerAnswer = readlineSync.question('Your answer: ');
-  //проверяем ответ пользователя
+  // проверяем ответ пользователя
   if (trueAnswer === playerAnswer) {
     console.log('Correct!');
     rightAnswers += 1;
