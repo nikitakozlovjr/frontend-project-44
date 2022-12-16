@@ -18,8 +18,9 @@ const brainGCD = () => {
   // игрвоой цикл
 
   while (rightAnswers < 3) {
-    const firstNum = Math.floor(Math.random() * 100);// первое число
+    const firstNum = Math.floor(Math.random() * (100 - 1) + 1);// первое число
     const secondNum = Math.floor(Math.random() * 100);// второе число
+
     // создаем переменную, которая будет хранить число до какого нужно идти циклу
     let mostBigVersion = 0;
     // предел числа до какого мы ищем
