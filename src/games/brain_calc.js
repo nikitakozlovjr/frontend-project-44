@@ -1,7 +1,7 @@
 // Импорты
 import { sayHi, outputCongratulations, checkAnswer } from '../index.js';
 
-const brainCalc = () => {
+export default () => {
 // приветствие
   const sayHiResult = sayHi();
   // выводим правила игры
@@ -45,5 +45,3 @@ const brainCalc = () => {
   // Выводим поздравление игроку, если он ответил три раза правильно
   outputCongratulations(sayHiResult, rightAnswers);
 };
-
-export { brainCalc };

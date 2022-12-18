@@ -1,7 +1,7 @@
 // Импорты
 import { sayHi, outputCongratulations, checkAnswer } from '../index.js';
 
-const brainProgression = () => {
+export default () => {
   // приветствие
   const sayHiResult = sayHi();
 
@@ -51,5 +51,3 @@ const brainProgression = () => {
   // Выводим поздравление игроку, если он ответил три раза правильно
   outputCongratulations(sayHiResult, rightAnswers);
 };
-
-export { brainProgression };

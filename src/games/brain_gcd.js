@@ -1,7 +1,7 @@
 // Импорты
 import { sayHi, outputCongratulations, checkAnswer } from '../index.js';
 
-const brainGCD = () => {
+export default () => {
   // приветствие
 
   const sayHiResult = sayHi();
@@ -52,5 +52,3 @@ const brainGCD = () => {
   // Выводим поздравление игроку, если он ответил три раза правильно
   outputCongratulations(sayHiResult, rightAnswers);
 };
-
-export { brainGCD };

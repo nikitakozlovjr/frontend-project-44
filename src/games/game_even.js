@@ -1,7 +1,7 @@
 // Импорты
 import { sayHi, outputCongratulations, checkAnswer } from '../index.js';
 // Код
-const brainEven = () => {
+export default () => {
 // приветствие
 
   const sayHiResult = sayHi();
@@ -35,5 +35,3 @@ const brainEven = () => {
   // Выводим поздравление игроку, если он ответил три раза правильно
   outputCongratulations(sayHiResult, rightAnswers);
 };
-
-export { brainEven };
