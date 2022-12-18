@@ -16,8 +16,10 @@ export default () => {
   while (rightAnswers < 3) {
     const firstNum = Math.floor(Math.random() * 100);// первое число прогрессии
     const coefficient = Math.floor(Math.random() * 12);// коэфицент
-    const lengthProgression = Math.floor(Math.random() * (10 - 5) + 5);// длина прогрессии от 5 до 10
-    const passPlace = Math.floor(Math.random() * (lengthProgression - 1) + 1);// позиция, где число будет пропущенно
+    // длина прогрессии от 5 до 10
+    const lengthProgression = Math.floor(Math.random() * (10 - 5) + 5);
+    // позиция, где число будет пропущенно
+    const passPlace = Math.floor(Math.random() * (lengthProgression - 1) + 1);
     // генерируем правильный ответ
     const trueAnswer = firstNum + coefficient * (passPlace - 1);
     // прогрессия в массиве
