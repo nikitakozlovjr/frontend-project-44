@@ -19,7 +19,7 @@ export default () => {
 
   while (rightAnswers < 3) {
     const firstNum = Math.floor(Math.random() * (100 - 1) + 1);// первое число
-    const secondNum = Math.floor(Math.random() * 100);// второе число
+    const secondNum = Math.floor(Math.random() * (100 - 1) + 1);// второе число
 
     // создаем переменную, которая будет хранить число до какого нужно идти циклу
     let mostBigVersion = 0;
