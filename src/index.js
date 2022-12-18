@@ -21,7 +21,8 @@ const sayHi = () => {
 // При неправильном ответе:
 // 1)меняет значение СТОП-СЛОВА на true;
 // 2)возвращает его и выводит пользователю, что ответ неверный и прощается с ним.
-const checkAnswer = (trueAnswer, name, fail) => {
+const checkAnswer = (trueAnswer, name) => {
+  let fail = ' ';
   // просим ввести его ответ и сразуже сохраняем его в переменной playerAnswer
   const playerAnswer = readlineSync.question('Your answer: ');
   // делаем проверку результата
@@ -34,6 +35,7 @@ const checkAnswer = (trueAnswer, name, fail) => {
     fail = true;
     return fail;
   }
+  return ' ';
 };
 // Данная функция выводит поздравление
 // Принемает имя пользователя и кол-во правильных ответов
